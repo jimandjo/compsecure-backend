@@ -1,8 +1,8 @@
 {
-  "name": "l12-nosql",
+  "name": "compsecure-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "build": "tsc",
     "start": "node src/app.js",

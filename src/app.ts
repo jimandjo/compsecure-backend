@@ -1,9 +1,9 @@
 import express, { NextFunction, Request, Response } from 'express'
 import morgan from 'morgan';
-import coffeeRoutes from './routes/coffeeRoutes';
+import postRoutes from './routes/postRoutes';
 import mongoose from 'mongoose';
 
-const connectionString: string = 'mongodb://localhost:27017/testDB';
+const connectionString: string = 'mongodb://localhost:27017/postsDB';
 
 mongoose.connect(connectionString).then(
     () => console.log('database connection successful!'), 
@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 // routes
-app.use('/api/coffee', coffeeRoutes);
+app.use('/api/posts', postRoutes);
 
 app.use((req: Request, res: Response, next: NextFunction) => {
     res.status(404).end();
