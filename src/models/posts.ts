@@ -2,20 +2,17 @@ import { Document, Model, Schema, model } from 'mongoose';
 import { Buffer } from 'buffer';
 
 interface IPost extends Document {
-    img: Buffer;
     title: string;
     date: Date;
     body: string;
 }
 
 const postSchema: Schema = new Schema({
-    img: {
-        type: Buffer,
-        unique: true
-    },
+
     title: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     date: {
         type: Date,
