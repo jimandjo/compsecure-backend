@@ -15,7 +15,6 @@ const getOnePost = async (req, res, next) => {
 exports.getOnePost = getOnePost;
 const addPost = async (req, res, next) => {
     const newPost = new posts_1.Post({
-        img: req.params.img,
         title: req.body.title,
         date: req.body.date,
         body: req.body.body
@@ -33,7 +32,6 @@ const editPost = async (req, res, next) => {
     let itemId = req.params.id;
     const updatedPost = new posts_1.Post({
         _id: itemId,
-        img: req.params.img,
         title: req.body.title,
         date: req.body.date,
         body: req.body.body

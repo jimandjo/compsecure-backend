@@ -15,7 +15,6 @@ export const getOnePost: RequestHandler = async (req, res, next) => {
 
 export const addPost: RequestHandler = async (req, res, next) => {
     const newPost: IPost = new Post({
-        img: req.params.img,
         title: req.body.title,
         date: req.body.date,
         body: req.body.body
@@ -35,7 +34,6 @@ export const editPost: RequestHandler = async (req, res, next) => {
     let itemId = req.params.id;
     const updatedPost: IPost = new Post({
         _id: itemId,
-        img: req.params.img,
         title: req.body.title,
         date: req.body.date,
         body: req.body.body
