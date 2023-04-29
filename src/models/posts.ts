@@ -8,7 +8,7 @@ interface IPost extends Document {
     body: string;
 }
 
-const postsSchema: Schema = new Schema({
+const postSchema: Schema = new Schema({
     img: {
         type: Buffer,
         unique: true
@@ -27,6 +27,6 @@ const postsSchema: Schema = new Schema({
     }
 });
 
-const Post: Model<IPost> = model('Post', postsSchema);
+const Post: Model<IPost> = model('Post', postSchema);
 
 export { IPost, Post };

@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Post = void 0;
 const mongoose_1 = require("mongoose");
 const buffer_1 = require("buffer");
-const postsSchema = new mongoose_1.Schema({
+const postSchema = new mongoose_1.Schema({
     img: {
         type: buffer_1.Buffer,
         unique: true
@@ -21,5 +21,5 @@ const postsSchema = new mongoose_1.Schema({
         required: true
     }
 });
-const Post = (0, mongoose_1.model)('Post', postsSchema);
+const Post = (0, mongoose_1.model)('Post', postSchema);
 exports.Post = Post;
